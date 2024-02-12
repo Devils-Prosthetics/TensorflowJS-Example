@@ -1,0 +1,17 @@
+{
+  "name": "tensorflowjs-example",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "process": "npm run build && node build/process.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.8.2",
+    "typescript": "~5.2.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.17.0",
+    "jimp": "^0.22.10",
+    "seedrandom": "^3.0.5"
+  }
+}
