@@ -2,7 +2,7 @@
   "name": "tensorflowjs-example",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "npm run build && node build/index.js",
     "process": "npm run build && node build/process.js"
   },
   "devDependencies": {

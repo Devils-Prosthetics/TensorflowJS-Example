@@ -1,5 +1,6 @@
 import Jimp from 'jimp';
 import fs from 'node:fs';
+import path from 'path';
 
 // This function takes an image location and a label and makes a csv file with the image data and the label
 async function csvImage(iamgeLocation: string, label: number) {
@@ -19,7 +20,8 @@ async function csvImage(iamgeLocation: string, label: number) {
 }
 
 async function processDirectory(label: number) {
-	fs.rmSync(`./data/${label}.csv`); // Remove the file if it exists
+	const csvLocaiton = path.resolve(`./data/${label}.csv`);
+	if (fs.existsSync(csvLocaiton)) fs.rmSync(csvLocaiton); // Remove the file if it exists
 	const files = await fs.promises.readdir('./data/trainingSet/' + label); // Get all the files in the directory
 
 	for (const file of files) { // Loop through all the files
