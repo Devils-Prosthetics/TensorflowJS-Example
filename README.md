@@ -4,14 +4,18 @@ Simple handwritten digit recongition using TensorFlow.js.
 
 ## Setup
 To install dependencies:
-
 ```bash
 npm install
 ```
 
+Then build the code to Typescript, remember everytime you make a change you must rerun this command.
+```bash
+npm run build
+```
+
 To convert the jpg files into a csv for the neural network. Really recommend checking out the process script in `./src/process.ts` to understand what is happening more!
 ```bash
-npm process
+npm run process
 ```
 
 ## Training the Model
